@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <!--
   Readnik scriptogr.am theme
+  Modified by Jean-Philippe Sirois
 -->
 <html lang="en">
 <head>
-  <title>{{author}}{{#is_post}}{{#posts}} | {{title}}{{/posts}}{{/is_post}}{{#is_page}}{{#posts}} | {{title}}{{/posts}}{{/is_page}} | scriptogr.am</title>
+  <title>Blog de {{author}}{{#is_post}}{{#posts}} | Blog de {{title}}{{/posts}}{{/is_post}}{{#is_page}}{{#posts}} | Blog de {{title}}{{/posts}}{{/is_page}}</title>
   <meta name="description" content="{{author}} {{blog_title}}" />
   <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
   <meta name="apple-mobile-web-app-capable" content="yes"/>
@@ -37,7 +38,7 @@
            <h2>{{blog_title}}</h2>
           </div>
          </div>
-          <div class="pages">
+         <div class="pages">
           {{#pages}}
             <a href="{{permalink}}">{{title}}</a>
           {{/pages}}
@@ -69,7 +70,7 @@
               <!-- social buttons -->
                <div class="share-buttons">
                 <div class="share-twitter">
-                  <a href="https://twitter.com/share" class="twitter-share-button" data-url="{{permalink}}" data-via="scriptogram">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                  <a href="https://twitter.com/share" class="twitter-share-button" data-url="{{permalink}}" data-via="scriptogram" data-lang="fr">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
                  </div>
                 <div class="share-facebook">
                   <div class="fb-like" data-href="{{permalink}}" data-send="false" data-layout="button_count" data-width="50" data-show-faces="false" data-font="arial"></div>
@@ -121,7 +122,7 @@
                <!-- social buttons -->
                <div class="share-buttons">
                 <div class="share-twitter">
-                  <a href="https://twitter.com/share" class="twitter-share-button" data-url="{{permalink}}" data-via="scriptogram">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                  <a href="https://twitter.com/share" class="twitter-share-button" data-url="{{permalink}}" data-via="scriptogram" data-lang="fr">Tweeter</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
                  </div>
                 <div class="share-facebook">
                   <div class="fb-like" data-href="{{permalink}}" data-send="false" data-layout="button_count" data-width="50" data-show-faces="false" data-font="arial"></div>
@@ -181,7 +182,9 @@
     </div><!-- end container -->
   </div><!-- end blog -->
 </div><!-- end wrapper -->
-<div class="scriptogram-link"><a href="http://scriptogr.am/" title="Built with scriptogr.am" >scriptogr.am</a></div>
+<!--
+  <div class="scriptogram-link"><a href="http://scriptogr.am/" title="Built with scriptogr.am" >scriptogr.am</a></div>
+-->
 <div id="fb-root"></div>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
 <script type="text/javascript" src="/themes/{{theme}}/app.js"></script>
@@ -195,7 +198,7 @@
 var js, fjs = d.getElementsByTagName(s)[0];
 if (d.getElementById(id)) return;
 js = d.createElement(s); js.id = id;
-js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=241164325961701";
+js.src = "//connect.facebook.net/fr_CA/all.js#xfbml=1&appId=241164325961701";
 fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 </script>
