@@ -28,6 +28,15 @@ body {
     height: auto;
     font-size: 85%;
   }
+  .container {
+     margin: 70px 0 0 !important;
+  }
+  .title {
+     padding-bottom: 0 !important;
+  }
+  .content {
+    margin-bottom: 120px !important;
+  }
   .pages a {
     margin: 0 0 0 7px !important;
   }
