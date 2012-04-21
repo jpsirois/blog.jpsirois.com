@@ -23,7 +23,7 @@ body {
 }
 
 @media only screen and (max-device-width: 480px) {
-  body, .blog, img, ul, li {
+  body, .blog, img {
     width: 90% !important;
     height: auto;
     font-size: 85%;
