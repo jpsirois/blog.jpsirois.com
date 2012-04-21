@@ -227,12 +227,12 @@ ul.tags {
 
 .share-twitter, .share-gplus {
   float: left;
-  margin-top: 4px;
 }
 .share-facebook {
   margin-right: 40px;
   float: left;
   padding-right: 15px;
+  margin-top: -5px !important;
 }
 
 /* Pagination */
