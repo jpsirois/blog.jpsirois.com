@@ -3,9 +3,9 @@ Date: 2012-04-20 23:45
 Title: Enfin de retour!
 ---
 
-Depuis un bon moment déjà je voulais recommencer à partager avec la communauté mes découvertes, expérimentations, idées et autres inspirations. Mes derniers écrits présentés sous forme de blog remontent à 2006, lorsque j’étais au Cégep. L’arrivée de Twitter et Facebook a toutefois diminué mon intérêt de bloguer, mais de plus en plus je ressentais à nouveau le besoin pour permettre de pouvoir élaborer sur certains sujets précis et conserver une référence de ces écrits.
+Depuis un bon moment déjà je voulais recommencer à partager avec la communauté mes découvertes, expérimentations, idées et autres inspirations. Mes derniers écrits présentés sous forme de blog remontent à 2006, lorsque j’étais au Cégep. L’arrivée de Twitter et Facebook a toutefois diminué mon intérêt de bloguer. Cependant, j’en ressentais de plus en plus le besoin à nouveau pour élaborer sur certains sujets précis et aussi pour conserver une référence de ces écrits. Mieux vaux tard que jamais. 
 
-Mieux vaux tard que jamais. Mais cela ne s’est pas fait du jour au lendemain. Depuis le début de l’hiver que je mijote cette idée. J’ai regardé de nombreuses plateformes de blogues, en passant par [Tumblr](http://www.tumblr.com), [Toto](http://cloudhead.io/toto), [Octopress](http://octopress.org), une solution 100% personnalisée et j’en passe. Tout au long  du processus je me suis questionné sur les fonctionnalités dont j’avais vraiment besoin. Cette réflexion m’a mené à cette liste :
+Depuis le début de l’hiver que je mijote cette idée. J’ai regardé de nombreuses plateformes de blogues, en passant par [Tumblr](http://www.tumblr.com), [Toto](http://cloudhead.io/toto), [Octopress](http://octopress.org), une solution 100% personnalisée et j’en passe. Tout au long  du processus je me suis questionné sur les fonctionnalités dont j’avais vraiment besoin. Cette réflexion m’a mené à cette liste :
 
 * système de gestion simple;
 * visuel minimaliste et optimisé pour du contenu textuel;
