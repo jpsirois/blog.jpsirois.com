@@ -14,7 +14,7 @@ Mieux vaux tard que jamais. Mais cela ne s’est pas fait du jour au lendemain. 
 
 C’est finalement sur [Scriptogr.am](http://scriptogr.am) que mon choix c’est arrêté. Un design minimaliste, des fonctionnalités de bases solides et du contenu géré en [Markdown](http://daringfireball.net/projects/markdown/). Que demander de plus?
 
-On doit autoriser la plateforme à ce connecter à votre compte Dropbox, où la celle-ci y créer le dossier `Apps/scriptogram/posts`. C’est dans ce dossier que le contenu de chaque billet/page est saisi en Markdown et les métadonnées sont géré selon une [syntaxe très simple](http://support.scriptogr.am/kb/basic-usage/writing-a-post-or-page). C’est encore en `beta`, mais déjà très fonctionnel et rempli de fonctionnalités intéressantes. 
+On doit autoriser la plateforme à ce connecter à votre compte [Dropbox](http://db.tt/pZaf7LG), où la celle-ci y créer le dossier `Apps/scriptogram/posts`. C’est dans ce dossier que le contenu de chaque billet/page est saisi en Markdown et les métadonnées sont géré selon une [syntaxe très simple](http://support.scriptogr.am/kb/basic-usage/writing-a-post-or-page). C’est encore en `beta`, mais déjà très fonctionnel et rempli de fonctionnalités intéressantes. 
 
 Pour mes besoins à court terme j’ai adapté un des thèmes existants pour pouvoir commencer à publier le plus rapidement possible. [Un repo GitHub](https://github.com/jpsirois/blog.jpsirois.com/) contenant les sources de ces billets ainsi que les sources des modifications apportés au thème de Scriptogr.am. J’y est même inclus mes brouillons et idées de billets, dans le but de voir l’intérêt que certain sujet pourrait susciter et ainsi faire accélérer l’écriture de ceux-ci.
 
