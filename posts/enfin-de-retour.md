@@ -9,7 +9,7 @@ Depuis le début de l’hiver que je mijote cette idée. J’ai regardé de nomb
 
 * système de gestion simple;
 * visuel minimaliste et optimisé pour du contenu textuel;
-* possibilité d'écrire et gérez tout autant sur un ordinateur, une tablette ou sur un mobile;
+* possibilité d'écrire et gérez tout sur un ordinateur, une tablette ou sur un mobile;
 * aucun système de commentaires intégré. Si j’en veux vraiment un jour j’ajouterai [Disqus](http://disqus.com) ou autre système semblable.
 
 C’est finalement sur [Scriptogr.am](http://scriptogr.am) que mon choix s’est arrêté. Un design minimaliste, des fonctionnalités de bases solides et du contenu géré en [Markdown](http://daringfireball.net/projects/markdown/). Que demander de plus?
