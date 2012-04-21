@@ -5,22 +5,19 @@
 -->
 <html lang="fr">
 <head>
+  <meta charset="utf-8">
   <title>{{#is_post}}{{#posts}}{{title}} — {{/posts}}{{/is_post}}{{#is_page}}{{#posts}}{{title}} — {{/posts}}{{/is_page}} Blog de {{author}}</title>
-  <meta name="description" content="{{author}} {{blog_title}}" />
   <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
   <meta name="apple-mobile-web-app-capable" content="yes"/>
   <meta name="ROBOTS" content="INDEX,FOLLOW">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta charset="utf-8">
-  <meta name="description" content="{{author}} | {{blog_title}}">
   <meta property="og:url" content="{{#posts}}{{#is_post}}{{permalink}}{{/is_post}}{{/posts}}">
-  <meta property="og:site_name" content="{{#posts}}{{#is_post}}{{title}} - {{/is_post}}{{/posts}}{{author}} on scriptogr.am">
-  <meta property="og:title" content="{{#posts}}{{#is_post}}{{title}} - {{/is_post}}{{/posts}}{{author}} on scriptogr.am" />
-  <meta property="og:description" content="{{author}} | {{blog_title}}" />
+  <meta property="og:site_name" content="{{#posts}}{{#is_post}}{{title}} — {{/is_post}}{{/posts}}Blog de {{author}}">
+  <meta property="og:title" content="{{#posts}}{{#is_post}}{{title}} — {{/is_post}}{{/posts}}Blog de {{author}}" />
+  <meta property="og:description" content="Blog de {{author}}" />
   <meta property="og:type" content="article" />
   <meta property="fb:app_id" content="241164325961701" />
-  <meta property="og:image" content="https://twimg0-a.akamaihd.net/profile_images/1733970682/scriptogram.png" />
   <link rel='canonical' href='{{#posts}}{{#is_post}}{{permalink}}{{/is_post}}{{/posts}}' />
   <link rel="shortcut icon" href="http://scriptogr.am/lib/img/favicon.ico">
   <link rel="alternate" type="application/rss+xml" title="RSS" href="{{base_url}}/feed" />
