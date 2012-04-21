@@ -40,6 +40,14 @@ body {
   .pages a {
     margin: 0 0 0 7px !important;
   }
+  .share-buttons div {
+    clear: both;
+    margin: 0 0 10px !important;
+    padding: 0 !important;
+    opacity: 1 !important;
+  }
+  .share-buttons div.share-gplus {
+     margin-bottom: -7px !important;
   }
   .scriptogram-link {
     bottom: 7px !important;
