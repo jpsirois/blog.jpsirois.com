@@ -1,204 +1,144 @@
 <!DOCTYPE html>
 <!--
-  Readnik scriptogr.am theme
+  Basic scriptogr.am theme
   Modified by Jean-Philippe Sirois
 -->
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <title>{{#is_post}}{{#posts}}{{title}} — {{/posts}}{{/is_post}}{{#is_page}}{{#posts}}{{title}} — {{/posts}}{{/is_page}} Blog de {{author}}</title>
-  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
-  <meta name="apple-mobile-web-app-capable" content="yes"/>
-  <meta name="ROBOTS" content="INDEX,FOLLOW">
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>{{#is_post}}{{#posts}}{{title}} — {{/posts}}{{/is_post}}{{#is_page}}{{#posts}}{{title}} — {{/posts}}{{/is_page}}{{#is_archive}}Archives — {{/is_archive}} Blog de Jean-Philippe Sirois</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="{{author}} | {{blog_title}}">
   <meta property="og:url" content="{{#posts}}{{#is_post}}{{permalink}}{{/is_post}}{{/posts}}">
-  <meta property="og:site_name" content="{{#posts}}{{#is_post}}{{title}} — {{/is_post}}{{/posts}}Blog de {{author}}">
-  <meta property="og:title" content="{{#posts}}{{#is_post}}{{title}} — {{/is_post}}{{/posts}}Blog de {{author}}" />
-  <meta property="og:description" content="Web, Open Source, Technos et autres…" />
+  <meta property="og:site_name" content="{{#posts}}{{#is_post}}{{title}} - {{/is_post}}{{/posts}}{{author}} on scriptogr.am">
+  <meta property="og:title" content="{{#posts}}{{#is_post}}{{title}} - {{/is_post}}{{/posts}}{{author}} on scriptogr.am" />
+  <meta property="og:description" content="{{author}} | {{blog_title}}" />
   <meta property="og:type" content="article" />
   <meta property="fb:app_id" content="241164325961701" />
-  <link rel='canonical' href='{{#posts}}{{#is_post}}{{permalink}}{{/is_post}}{{/posts}}' />
+  <meta property="og:image" content="https://twimg0-a.akamaihd.net/profile_images/1733970682/scriptogram.png" />
+  <link rel="canonical" href="{{#posts}}{{#is_post}}{{permalink}}{{/is_post}}{{/posts}}" />
   <link rel="shortcut icon" href="//jpsirois.com/favicon.ico">
   <link rel="alternate" type="application/rss+xml" title="RSS" href="{{base_url}}/feed" />
   {{css}}
+  <style>.avatar{background: #f5f5f2 url("{{profile_image}}");background: rgba(100,100,100,0.1) url("{{profile_image}}");}#top-header{background-image: url("{{cover_image}}");}a:hover,blockquote,article.archive .archive-link a:hover {border-color:{{accent_color}}}#articles h2 a:hover,#top-header:hover,#top-header:hover h1{color:{{accent_color}}}pre:hover,body:before{background:{{accent_color}}}</style>
+  <script src="/themes/{{theme}}/assets/js/respond.min.js"></script>
   <script>var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-3404321-9']); _gaq.push(['_trackPageview']); (function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })();</script>
 </head>
-<body>
-<div class="wrapper">
-  <div class="blog">
-
-      <div id="menu" class="menu-top">
-        <div class="blog-info">
-          <h1><a href="{{home_link}}">{{author}}</a></h1>
-          <div class="blog-description">
-           <h2>{{blog_title}}</h2>
-          </div>
-         </div>
-         <div class="pages">
-          {{#pages}}
-            <a href="{{permalink}}">{{title}}</a>
-          {{/pages}}
+  <body>
+    <header class="parallax" data-velocity="-.2" id="top-header">
+     <div class="group content">
+      <nav id="main-nav">
+        <ul>{{#pages}}<li><a href="{{permalink}}">{{title}}</a></li>{{/pages}}</ul>
+      </nav>
+      <hgroup id="main-header">
+        <div class="avatar"></div>
+         <a href="{{base_url}}"><h1>{{author}}</h1></a>
+         <div class="author">
+          <p>{{blog_title}}</p>
         </div>
-      </div>
+      </hgroup>
+     </div>
+     <div ></div>
+    </header>
+    <section id="articles" class="{{page}}">
 
-      <div class="container">
-      {{#posts}}
-        <!-- first post -->
-        {{#first}}
-         <div class="post">
-            <div class="content">
-            <div class="date">{{prettydate}}</div>
-            <div class="title"><h2><a href="{{permalink}}">{{title}}</a> {{#post_permalink}}<a href="{{post_permalink}}">#</a>{{/post_permalink}}</h2></div>
-            <div class="body-post">
-              <!--if excerpt-->
-              {{#excerpt}}<span class="introduction">{{excerpt}}</span>{{/excerpt}}
-              <!--endif-->
-              {{content}}
-              <!-- if tags -->
-              {{#if_tags}}
-              <ul class="tags">
-                {{#tags}}
-                  <li><a href="{{base_url}}/tag/{{name}}">{{name}}</a></li>
-                {{/tags}}
-              </ul>
-              {{/if_tags}}
-              <!-- endif -->
-              <!-- social buttons -->
-               <div class="share-buttons">
-                <div class="share-twitter">
-                  <a href="https://twitter.com/share" class="twitter-share-button" data-url="{{permalink}}" data-text="{{#posts}}{{title}}{{/posts}}" data-via="JP_Sirois" data-lang="fr">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-                 </div>
-                <div class="share-gplus">
-                  <g:plusone size="medium" href="{{permalink}}"></g:plusone>
-                 </div>
-                <div class="share-facebook">
-                  <div class="fb-like" data-href="{{permalink}}" data-send="false" data-layout="button_count" data-width="50" data-show-faces="false" data-font="arial"></div>
-                </div>
-               </div>
-            </div><!--end body-->
-          </div><!--end content-->
-          <div class="clear"></div>
-        </div><!--end post-->
-        <p class="previous-articles">Articles précédents</p>
-       {{/first}}
-       <!-- end first post -->
-       <!-- index and not first -->
-       {{^first}}
-       {{#is_index}}
-        <div class="post">
-          <div class="archive-content">
-            <div class="archive-date">{{prettydate}}</div>
-            <div class="archive-title"><h3><a href="{{permalink}}">{{title}}</a> {{#post_permalink}}<a href="{{post_permalink}}">#</a>{{/post_permalink}}</h2></h3></div>
-          </div><!--end archive-content-->
-          <div class="clear"></div>
-        </div>
-      {{/is_index}}
-      {{/first}}
+    {{#posts}}
 
-      <!-- post permalink -->
+    {{^is_archive}}
+    <article>
+     <div class="content">
+     {{#date}}<div class="date">{{prettydate}}</div>{{/date}}
+      <div class="articlepost">
+      <header>
+        <h2><a href="{{permalink}}">{{title}}</a> {{#post_permalink}}<a href="{{post_permalink}}">#</a>{{/post_permalink}}</h2>
+      </header>
+      {{#excerpt}}<span class="introduction">{{excerpt}}</span>{{/excerpt}}
+      {{content}}
+      {{#if_tags}}
+        <ul class="tags">
+          {{#tags}}<li><a href="{{base_url}}/tag/{{name}}">{{name}}</a></li>{{/tags}}
+        </ul>
+      {{/if_tags}}
       {{#is_post}}
-         <div class="post">
-            <div class="content">
-            <div class="date">{{prettydate}}</div>
-            <div class="title"><h2><a href="{{permalink}}">{{title}}</a> {{#post_permalink}}<a href="{{post_permalink}}">#</a>{{/post_permalink}}</h2></div>
-            <div class="body-post">
-              <!--if excerpt-->
-              {{#excerpt}}<span class="introduction">{{excerpt}}</span>{{/excerpt}}
-              <!--endif-->
-              {{content}}
-              <!-- if tags -->
-              {{#if_tags}}
-              <ul class="tags">
-                {{#tags}}
-                  <li><a href="{{base_url}}/tag/{{name}}">{{name}}</a></li>
-                {{/tags}}
-              </ul>
-              {{/if_tags}}
-              <!-- endif -->
-               <!-- social buttons -->
-               <div class="share-buttons">
-                <div class="share-twitter">
-                  <a href="https://twitter.com/share" class="twitter-share-button" data-url="{{permalink}}" data-text="{{#posts}}{{title}}{{/posts}}" data-via="JP_Sirois" data-lang="fr">Tweeter</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-                 </div>
-                <div class="share-gplus">
-                  <g:plusone size="medium" href="{{permalink}}"></g:plusone>
+                <!-- Like button -->
+                <div id="social">
+
+                  <! -- Tweet button -->
+                  <a href="https://twitter.com/share" class="twitter-share-button" data-text="Currently reading: {{title}} by {{author}}" data-related="scriptogram" data-count="none">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+                  <! -- Like button -->
+                  <div class="fb-like" data-href="{{permalink}}" data-send="false" data-layout="button_count" data-width="48" data-show-faces="false"></div>
+
+                  <! -- +1 button -->
+                  <g:plusone size="medium" annotation="none"></g:plusone>
+
+                  <script type="text/javascript">
+                    (function() {
+                      var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                      po.src = 'https://apis.google.com/js/plusone.js';
+                      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                    })();
+                  </script>
                 </div>
-                <div class="share-facebook">
-                  <div class="fb-like" data-href="{{permalink}}" data-send="false" data-layout="button_count" data-width="50" data-show-faces="false" data-font="arial"></div>
-                </div>
-               </div>
-           </div><!--end body-->
-          </div><!--end content-->
-          <div class="clear"></div>
-        </div><!--end post-->
-        <p class="previous-articles"><a href="//blog.jpsirois.com/archive">Plus d’articles</p>
       {{/is_post}}
-      <!-- endif -->
+      </div>
+     </div>
+    </article>
+    {{/is_archive}}
 
-      <!-- page permalink -->
-      {{#is_page}}
-          <div class="post">
-           <div class="content">
-            <div class="date"></div>
-            <div class="title"><h2><a href="{{permalink}}">{{title}}</a> {{#post_permalink}}<a href="{{post_permalink}}">#</a>{{/post_permalink}}</h2></div>
-            <div class="body-post">
-              <!--if excerpt-->
-              {{#excerpt}}<span class="introduction">{{excerpt}}</span>{{/excerpt}}
-              <!--endif-->
-              {{content}}
-              <!-- if tags -->
-              {{#if_tags}}
-              <ul class="tags">
-                {{#tags}}
-                  <li><a href="{{base_url}}/tag/{{name}}">{{name}}</a></li>
-                {{/tags}}
-              </ul>
-              {{/if_tags}}
-              <!-- endif -->
-            </div><!--end body-->
-          </div><!--end content-->
-          <div class="clear"></div>
-        </div><!--end post-->
-      {{/is_page}}
-      <!-- endif -->
-
-      <!-- archive -->
-      {{#is_archive}}
-        <div class="post">
-          <div class="archive-content">
-            <div class="archive-date">{{prettydate}}</div>
-            <div class="archive-title"><h3><a href="{{permalink}}">{{title}}</a></h3></div>
-          </div><!--end archive-content-->
-          <div class="clear"></div>
-        </div>
-      {{/is_archive}}
-
+    <!-- archive -->
+    {{#is_archive}}
+    <article class="archive{{#archive_divider}} archive-devider{{/archive_divider}} {{archive_divider_index}}">
+      <div class="content">
+        {{#archive_divider}}<div class="archive-date-divider">{{archive_divider}}</div>{{/archive_divider}}
+         <span class="archive-date">{{prettydate}}</span><span class="archive-link"><a href="{{permalink}}">{{title}}</a>{{#post_permalink}} <a href="{{post_permalink}}">#</a>{{/post_permalink}}</strong>
+        {{#excerpt}}<span class="introduction">{{excerpt}}</span>{{/excerpt}}
+      </div>
+    </article>
+    {{/is_archive}}
     {{/posts}}
-    <div class="pagination">{{pagination}}</div>
-    </div><!-- end container -->
-  </div><!-- end blog -->
-</div><!-- end wrapper -->
-<!--
-  <div class="scriptogram-link"><a href="http://scriptogr.am/" title="Built with scriptogr.am" >scriptogr.am</a></div>
--->
-<div id="fb-root"></div>
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script type="text/javascript" src="/themes/{{theme}}/app.js"></script>
-<script type="text/javascript">
-(function() {
-    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-    po.src = '//apis.google.com/js/plusone.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-})();
-(function(d, s, id) {
-var js, fjs = d.getElementsByTagName(s)[0];
-if (d.getElementById(id)) return;
-js = d.createElement(s); js.id = id;
-js.src = "//connect.facebook.net/fr_CA/all.js#xfbml=1&appId=241164325961701";
-fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-</script>
-<script>var _gauges = _gauges || []; (function() { var t = document.createElement('script'); t.type  = 'text/javascript'; t.async = true; t.id = 'gauges-tracker'; t.setAttribute('data-site-id', '4f77107e613f5d03c2000004'); t.src = '//secure.gaug.es/track.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(t, s); })();</script>
-</body>
+
+    <!-- 404 -->
+    {{^posts}}
+    <article>
+     <div class="content">
+      <div class="articlepost">
+      <header>
+        <h2><a href="{{base_url}}">Found nothing to read, sorry.</a></h2>
+      </header>
+      </div>
+     </div>
+    </article>
+    {{/posts}}
+
+    {{#is_archive}}
+    <!-- used to give the archive bottom some nice spacing... -->
+    <div class="archive-foot"></div>
+    {{/is_archive}}
+
+    </section>
+    <section class="pagination">
+      <div class="content">{{pagination}}</div>
+    </section>
+    <footer>
+      <div class="content">
+        {{blog_title}}
+            <p>Conçus avec <a class="scriptogram-link" href="http://scriptogr.am/" title="Conçus avec scriptogr.am" >scriptogr.am</a></p>
+      </div>
+    </footer>
+    <div id="fb-root"></div>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/themes/{{theme}}/app.js"></script>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/fr_CA/all.js#xfbml=1";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <script src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </body>
 </html>
