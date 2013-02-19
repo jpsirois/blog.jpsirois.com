@@ -564,11 +564,11 @@ ul.tags {
  background: white;
 }
 
-  #articles h2 a {
+  #articles h1 a {
     border: 0;
   }
 
-  #articles h2 a:hover {
+  #articles h1 a:hover {
     color: #0088cc
   }
 
