@@ -1,6 +1,6 @@
 ---
 Date: 2013-02-18 22:22
-Title: Grocery iQ
+Title: Grocery iQ, solution ultime de liste d’achats
 ---
 
 Vous avez tous déjà fait une liste pour faire vos comissions. Que ce soit pour l'épicerie pour ne pas oublier d’acheter les céréales, ou bien que ce soit pour la quincaillerie, pour éviter d’acheter des clous de 3" au lieu de 2½". Vous avez surement tous aussi déjà écrit ça sur un Post-it® et/ou dans un courriel à vous même. Rapidement on se rend compte que c’est loin d’être optimale comme solution. 
